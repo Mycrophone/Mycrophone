@@ -1,0 +1,35 @@
+public class ChangeUser extends Activity {
+
+	public static String name = "Kevin Shi";
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+	@Override
+	
+	
+	
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_change_user);
+		setTitle("MYcrophone");
+		// Show the Up button in the action bar.
+		
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+	}
+	
+	
+	public void submitChangeUser(View view){
+    	Intent intent = new Intent(this, HomePage.class);
+    	EditText y = (EditText) findViewById(R.id.edit_Change_User_Username);
+    	name = y.getText().toString(); 
+    	
+    	
+    	
+    	startActivity(intent);
+	}
+	
+	public static String username()
+	{
+		
+		return name;
+	}
+	
+	
